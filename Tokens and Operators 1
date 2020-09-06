@@ -1,0 +1,17 @@
+//MyCaptain Challenge : Tokens and Operators
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int size_char = sizeof(char), size_int = sizeof(int);
+    int size_float = sizeof(float), size_double = sizeof(double);
+
+    //printing the memory allocated to different data types
+    cout << "Size of char: " << size_char << " bytes\n";
+    cout << "Size of int: " << size_int << " bytes\n";
+    cout << "Size of float: " << size_float << " bytes\n";
+    cout << "Size of double: " << size_double << " bytes\n";
+
+    return 0;
+}
