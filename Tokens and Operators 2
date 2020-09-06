@@ -1,0 +1,16 @@
+//MyCaptain Challenge : Tokens and Operators
+//Code for multiplication of two numbers
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1;
+    cin >> num2;
+    float product = num1*num2;    //multiplying the numbers input by user
+    cout << "Product = " << product;
+    return 0;
+}
