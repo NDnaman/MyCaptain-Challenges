@@ -1,0 +1,28 @@
+//MyCaptain Challenge - Decision Making
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+
+int main()
+{
+    char age[3];
+    cout << "Enter age of a user: ";
+    gets(age);
+    int int_age = atoi(age);
+
+    //to check if the entered age is valid
+    while(int_age <= 0)
+    {
+        cout << "\nEnter a valid age: ";
+        gets(age);
+        int_age = atoi(age);
+    }
+
+    if(int_age < 18)
+        cout << "\nNot eligible for voting.\n";
+    else
+        cout << "\nEligible for voting.\n";
+
+    return 0;
+}
