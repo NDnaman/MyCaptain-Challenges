@@ -1,0 +1,23 @@
+//MyCaptain code Arrays, Strings and Pointers
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5], i;
+
+    cout << "Enter elements: ";
+    for(i = 0; i <= 4; i++)
+    {
+        cin >> arr[i];
+    }
+
+    int *p;     	//initializing pointer variable
+    cout << "You entered: ";
+
+    for(i = 0; i <= 4; i++)
+    {
+        p = &arr[i];         //attributing address of the elements to p
+        cout << *p << " ";   //dereferencing the address and printing the value contained
+    }
+    return 0;
+}
