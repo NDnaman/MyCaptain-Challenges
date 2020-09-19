@@ -1,0 +1,74 @@
+/*Write a C++ program to read time in HH:MM:SS format and convert into total seconds using class.
+
+Your output should look something like this
+
+Enter time: Hours? 1 Minutes? 1 Seconds? 6 The time is = 01:01:06 Time in total seconds: 3666 */
+
+#include <iostream>
+using namespace std;
+
+class time
+{
+public:
+    int hrs, mins, secs;
+    void input();
+    void calc_time();
+    void calc_secs();
+    void calc_mins();
+    void sec_time();
+};
+
+void time :: input()
+{
+    cout << "Enter Time: \nHours? ";
+    cin >> hrs;
+    cout << "Minutes? ";
+    cin >> mins;
+    cout << "Seconds? ";
+    cin >> secs;
+    calc_time();
+}
+void time :: sec_time()
+{
+    int a = hrs*60*60 + mins*60 + secs;
+    cout << "\nTime in total seconds: " << a;
+}
+void time :: calc_mins()
+{
+    int extra_hrs = 0, a = mins;
+    int b = a;
+    while(a >= 60)
+    {
+        a = a-60;
+        extra_hrs++;
+    }
+    mins = a%60;
+    hrs = hrs + extra_hrs;
+}
+void time :: calc_secs()
+{
+    int extra_mins = 0, a = secs;
+    int b = a;
+    while(a >= 60)
+    {
+        a = a-60;
+        extra_mins++;
+    }
+    secs = a%60;
+    mins = mins + extra_mins;
+
+}
+void time :: calc_time()
+{
+    calc_secs();
+    calc_mins();
+    cout << "\nThe time is = " << hrs << ":" << mins << ":" << secs;
+    sec_time();
+}
+
+int main()
+{
+    time t;
+    t.input();
+}
+
